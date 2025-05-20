@@ -229,3 +229,7 @@ footer{
 .service-btn:hover {
     background: #45a049;
 }
+#map {
+    height: 400px;
+    width: 100%;
+}
