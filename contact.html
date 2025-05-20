@@ -39,6 +39,7 @@
         <h3>Всеволод Моісєєв</h3>
         <h3>+38(050)-xxx-xxxx</h3>
     </div>
+    <div id="map"></div>
     <footer>
         <div class="footer1">
             <p>©Всеволод Моісєєв</p>
@@ -49,5 +50,21 @@
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="telegram.png" alt="Telegram"></a>
         </div>
     </footer>
+    <script>
+        function initMap() {
+            var myLatLng = {lat: 50.450441384943105, lng: 30.523573686804337};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: myLatLng
+            });
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Київ'
+            });
+        }
+    </script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbF3EV9MKOFz4kccM6ulL9QOBdRhkT3mc&callback=initMap"></script>
 </body>
 </html>
